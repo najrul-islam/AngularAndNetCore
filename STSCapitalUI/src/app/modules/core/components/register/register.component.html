@@ -1,0 +1,40 @@
+<div class="login-wrapper">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Register</mat-card-title>
+      </mat-card-header>
+  
+      <form class="example-form"  [formGroup]="userForm" novalidate (ngSubmit)="onSubmit()">
+  
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" id="firstName" name="firstName" formControlName="firstName"
+            placeholder="First Name" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" id="lastName" name="lastName" formControlName="lastName"
+            placeholder="Last Name" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" id="userName" name="userName" formControlName="userName"
+            placeholder="User Name" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput type="email" id="email" name="email" formControlName="email"
+            placeholder="Email" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" id="phone" name="phone" formControlName="phone"
+            placeholder="Phone number">
+          </mat-form-field> 
+          <mat-form-field class="example-full-width">
+            <input matInput  type="password" id="password" name="password" formControlName="password"
+              placeholder="Password" required>
+          </mat-form-field> 
+        </mat-card-content>
+  
+        <button mat-stroked-button color="accent"  type="submit" class="btn-block">Register</button>
+  
+      </form>
+    </mat-card>
+  </div>

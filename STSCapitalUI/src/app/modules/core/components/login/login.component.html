@@ -1,0 +1,25 @@
+<div class="login-wrapper">
+
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Log in</mat-card-title>
+      </mat-card-header>
+  
+      <form class="example-form" [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput type="email" id="email" name="email" formControlName="email"
+            placeholder="Email" required>
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input matInput  type="password" id="password" name="password" formControlName="password"
+              placeholder="Password" required>
+          </mat-form-field>
+        </mat-card-content>
+        <button mat-stroked-button color="accent" type="submit" class="btn-block">Log in</button>
+        <button mat-stroked-button color="Email" routerLink="/register" type="button" class="btn-block">Register</button>
+      </form>
+    </mat-card>
+  
+  </div>

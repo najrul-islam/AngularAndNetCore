@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "mvaE8AL779zPxuNtaF5jcqw4NSUVeqm1m4njU8ZGfv9ZRPfu+NiQZDqAXWhmLogKGfjSd3/wDkFAJ4GK3snezg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LION\\Downloads\\fullstack-developer-challenge\\App\\STSCapitalApi\\Utility\\Utility.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LION\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.8\\microsoft.extensions.dependencyinjection.abstractions.3.1.8.nupkg.sha512",
+    "C:\\Users\\LION\\.nuget\\packages\\microsoft.extensions.options\\3.1.8\\microsoft.extensions.options.3.1.8.nupkg.sha512",
+    "C:\\Users\\LION\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.8\\microsoft.extensions.primitives.3.1.8.nupkg.sha512",
+    "C:\\Users\\LION\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\LION\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\LION\\.nuget\\packages\\system.memory\\4.5.2\\system.memory.4.5.2.nupkg.sha512",
+    "C:\\Users\\LION\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\LION\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,41 @@
+<div class="panel_container">
+    <div class="panel_header">Edit Task</div>
+    <div class="panel_content">
+        <div class="New_task">
+            <div class="actions">
+                <button mat-raied-button class="hx_button" (click)="backToTaskList()">Discard</button>
+                <button mat-raied-button class="hx_button" (click)="save()">Save</button>
+            </div>
+            <form [formGroup]="taskForm" (ngSubmit)="save()" novalidate autocomplete="off">
+                <div class="task_container">
+                    <div class="box_title">Edit task</div>
+                    <div class="box left">
+                        <mat-form-field class="example-full-width ">
+                            <mat-label>Title</mat-label>
+                            <input matInput type="text" formControlName="title" placeholder="*Required" required>
+                            <mat-error
+                                *ngIf="taskForm.get('title').hasError('required') && taskForm.get('title').touched">Title
+                                is required</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width ">
+                            <mat-label>Description</mat-label>
+                            <textarea matInput type="text" formControlName="description"
+                                placeholder="Description"></textarea>
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width ">
+                            <mat-label>Task Date</mat-label>
+                            <input readonly matInput [matDatepicker]="fromDate" name="fromDate" formControlName="taskDate"
+                             (click)="fromDate.open()" required>
+                          <mat-datepicker #fromDate></mat-datepicker>
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width ">
+                            <mat-label>Location</mat-label>
+                            <input matInput type="text" formControlName="location" placeholder="Location">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

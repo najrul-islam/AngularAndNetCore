@@ -1,0 +1,54 @@
+<div class="panel_container">
+    <div class="panel_header">
+        <span class="title">Task List</span>
+    </div>
+    <div class="panel_content">
+        <div class="task_list">
+            <div class="content_action">
+                <button mat-raised-button routerLink="/task/add_task">Add New Task</button>
+                <button mat-raised-button *ngIf="selectedRow" (click)="editTask()">Edit</button>
+                <button mat-raised-button *ngIf="selectedRow" (click)="deleteTask()">Delete</button>
+            </div>
+            <div class="angular_table">
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                    <ng-container matColumnDef="title">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Task Title </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{element.title}}
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="description">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{element.description}}
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="taskDate">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{element.taskDate|date: 'short'}}
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="taskFromTime">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> From </th>
+                        <td mat-cell *matCellDef="let element"> 
+                            {{element.taskFromTime|date: 'shortTime'}} 
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="taskToTime">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> To </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{element.taskToTime|date: 'shortTime'}} 
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="location">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Location</th>
+                        <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="getRecord(row)"></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
